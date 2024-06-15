@@ -1,5 +1,6 @@
-# Job Search Spring Boot Application
 
+# Job Search Spring Boot Application
+**Note: This application is currently under development.**
 ## Overview
 
 This is a Spring Boot application designed to search for jobs. It connects to an Atlas DB to store and retrieve job information.
