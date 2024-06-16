@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.irshadmdk.job_portal.PostRepository;
 
 import Models.Post;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 public class PostController {
@@ -19,4 +22,12 @@ public class PostController {
     public List<Post> getAllPosts(){
         return repo.findAll();
     }
+
+    @PostMapping("post")
+    public Post addPost(@RequestBody Post post){
+        return repo.save(post);
+
+    }
+    
+
 }
