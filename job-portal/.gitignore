@@ -1,4 +1,8 @@
 HELP.md
+application.properties
+
+pen_spark
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
