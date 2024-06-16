@@ -1,6 +1,6 @@
 HELP.md
 application.properties
-
+src/main/resources/*.properties
 pen_spark
 
 target/
