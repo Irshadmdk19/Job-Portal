@@ -3,6 +3,7 @@ package com.irshadmdk.job_portal.Controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class PostController {
     @Autowired
     PostRepository repo;
@@ -23,11 +25,12 @@ public class PostController {
     @Autowired
     SearchPostRepository searchRepo;
 
-    @GetMapping("posts")
+    @CrossOrigin
+    @GetMapping("allPosts")
     public List<Post> getAllPosts(){
         return repo.findAll();
     }
-
+    @CrossOrigin
     @PostMapping("post")
     public Post addPost(@RequestBody Post post){
         return repo.save(post);
