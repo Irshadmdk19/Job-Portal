@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: job-portal-backend
+    env: java
+    region: oregon
+    plan: free
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://irshadmdk99:irshamongo@cluster0.dapdax3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
